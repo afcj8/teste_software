@@ -34,5 +34,12 @@ class FracaoTest(unittest.TestCase):
     
     self.assertEqual(Fracao(3, 10), resultado)
 
+  def test_divisao(self):
+    f1 = Fracao(3, 4)
+    f2 = Fracao(5, 2)
+    resultado = f1.divisao(f2)
+
+    self.assertEqual(Fracao(6, 20), resultado)
+
 if __name__ == '__main__':
   unittest.main()

@@ -24,3 +24,8 @@ class Fracao:
     n = self.numerador * f.numerador
     d = self.denominador * f.denominador
     return Fracao(n, d)
+  
+  def divisao(self, f):
+    n = self.numerador * f.denominador
+    d = self.denominador * f.numerador
+    return Fracao(n, d)
