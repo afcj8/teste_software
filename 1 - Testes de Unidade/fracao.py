@@ -61,3 +61,14 @@ class Fracao:
       n2 = f.numerador * (d // f.denominador)
       n = n1 + n2
     return Fracao(n, d)
+  
+  def subtracao(self, f):
+    if self.denominador == f.denominador:
+      n = self.numerador - f.numerador
+      d = self.denominador
+    else:
+      d = self.mmc(f)
+      n1 = self.numerador * (d // self.denominador)
+      n2 = f.numerador * (d // f.denominador)
+      n = n1 - n2
+    return Fracao(n, d)
