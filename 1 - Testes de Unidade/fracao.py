@@ -19,3 +19,8 @@ class Fracao:
     if not isinstance(other, Fracao):
         return False
     return self.numerador == other.numerador and self.denominador == other.denominador
+  
+  def multiplicacao(self, f):
+    n = self.numerador * f.numerador
+    d = self.denominador * f.denominador
+    return Fracao(n, d)

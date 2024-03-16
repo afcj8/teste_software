@@ -27,5 +27,12 @@ class FracaoTest(unittest.TestCase):
     self.assertEqual(f1, f2)
     self.assertNotEqual(f1, f3) 
 
+  def test_multiplicacao(self):
+    f1 = Fracao(1, 2)
+    f2 = Fracao(3, 5)
+    resultado = f1.multiplicacao(f2)
+    
+    self.assertEqual(Fracao(3, 10), resultado)
+
 if __name__ == '__main__':
   unittest.main()
