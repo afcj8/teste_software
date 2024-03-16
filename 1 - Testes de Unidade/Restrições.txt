@@ -1,0 +1,3 @@
+------------------ Fração ------------------
+Numerador e denominador devem ser inteiros;
+Denominador não pode ser zero;
