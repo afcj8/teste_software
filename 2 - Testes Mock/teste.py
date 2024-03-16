@@ -42,5 +42,19 @@ class CrapsTest(unittest.TestCase):
     self.assertTrue(c.fimDeJogo())
     self.assertEqual(2, c.vencedor)
 
+  def test_jogador_ganha_de_segunda(self):
+    c = Craps()
+    random.randint = Mock()
+    # primeira rodada
+    random.randint.side_effect = [1, 3]
+    c.rolarDados()
+    self.assertFalse(c.fimDeJogo())
+    # segunda rodada
+    random.randint.side_effect = [2, 2]
+    c.rolarDados()
+    self.assertTrue(c.fimDeJogo())
+    self.assertEqual(1, c.vencedor)
+
+
 if __name__ == '__main__':
   unittest.main()
