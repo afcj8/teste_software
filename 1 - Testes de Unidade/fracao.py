@@ -14,3 +14,8 @@ class Fracao:
   @property
   def denominador(self):
     return self._denominador
+  
+  def __eq__(self, other):
+    if not isinstance(other, Fracao):
+        return False
+    return self.numerador == other.numerador and self.denominador == other.denominador

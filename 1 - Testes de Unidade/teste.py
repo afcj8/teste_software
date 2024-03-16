@@ -18,5 +18,14 @@ class FracaoTest(unittest.TestCase):
     with self.assertRaises(ValueError):
         Fracao(1, 0)
 
+  def test_eq(self):
+    f1 = Fracao(1, 2)
+    f2 = Fracao(1, 2)
+    f3 = Fracao(3, 5)
+    
+    self.assertEqual(f1, f1)
+    self.assertEqual(f1, f2)
+    self.assertNotEqual(f1, f3) 
+
 if __name__ == '__main__':
   unittest.main()
