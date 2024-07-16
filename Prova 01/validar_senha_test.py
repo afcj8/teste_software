@@ -1,4 +1,5 @@
 import unittest
+from validar_senha import validar_senha
 
 class TestValidacaoSenha(unittest.TestCase):
     def test_senha_valida(self):
