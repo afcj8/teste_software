@@ -1,5 +1,6 @@
 from unittest.mock import Mock
 import unittest
+from gerenciador_sirene import Evento, GerenciadorSirene
 
 class TestGerenciadorSirene(unittest.TestCase):
     def test_tocar_sirene_no_horario1_manha(self):
